@@ -1,0 +1,45 @@
+\documentclass{report}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\title{Title}
+\author{Julian Pagcaliwagan}
+\date{}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+    \maketitle
+    \section*{Sets}
+    \subsection*{Definitions}
+        \begin{definition}[Sets]
+            A set is an \textbf{unordered} collection of objects called elements, denoted by $ \left\{ \right\} $
+        \end{definition}
+
+        \begin{definition}[Classifications of numbers]
+            We can categorize classifications of numbers as sets. We have
+            \begin{itemize}
+                \item $ \mathbb{Z} = \left\{ -2, -1, 0, 1, 2, ... \right\} $
+                \item $ \mathbb{N} = \left\{ 0, 1, 2, 3, ... \right\} $
+                \item $ \varnothing = \left\{  \right\} $
+                \item $ \mathbb{Q} = \left\{ \frac{a}{b}: a, b \in \mathbb{N}, b \neq 0 \right\} $
+            \end{itemize}
+        \end{definition}
+
+        \noindent The last item, the rationals calls to mind set builder notation, where sets can be built with conditions.
+        We can invoke set-builder notation: 
+        \begin{center}
+            \{elements : conditions used to generate the elements\}
+        \end{center}
+
+        Since math is a logical and interpretable language, we can interpret the set-builder notation of the rationals to be
+        \[
+            \mathbb{Q} = \left\{ \frac{a}{b}: a, b \in \mathbb{N}, b \neq 0 \right\}
+        \]
+        The set of all rational numbers is defined to be the set of all fractions in the form $\frac{a}{b}$ such that $a$ and $ b $ are integers and $ b $ is nonzero.
+
+    \subsection*{Proving $ A \subseteq B $}
+    
+    
+\end{document}

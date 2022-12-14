@@ -1,0 +1,51 @@
+\documentclass{report}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\title{Lines}
+\author{Julian Pagcaliwagan}
+\date{December 13, 2022}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\maketitle
+\section*{Lines in $ \mathbb{R}^n $}
+    \subsection*{The Equation of a Line}
+        \noindent We all know intuitively that a line is represented by the equation $ y = mx + b $, but a line can also be represented using a pair of two vectors
+        \begin{definition}[Equation of a line]
+            let $ \mathbf{d}$ be the direction vector abd $ \mathbf{p} $ be the position vector, then we can represent a line as 
+            the position vector plus a scalar multiple of the direction vector
+            \[
+                l = \left\{ \mathbf{p} + t \mathbf{d} | t \in\mathbb{R} \right\}
+            \]
+            where $ l $ is a line that passes through the point $ \mathbf{p} $ and is parallel to the direction vector $ \mathbf{d} $
+            Given the set-builder notation on the definition of a line, we should consider a line to be the \textbf{set of all position vectors $ \overrightarrow{OX}$ to points on the line}\\
+            Similarly, we can view a line as a function corresponding to the scalar multiple $ t $
+            \[
+                \mathbf{x(t)} = \mathbf{p} + t \mathbf{d}
+            \]
+        
+            \noindent Note that this implies that, given two position vectors, we can conclude that the direction vector is the distance between those two
+            \[
+                \mathbf{x(t)} = \mathbf{ \mathbf{p_1}} + t ( \mathbf{ \mathbf{p_1}} - \mathbf{ \mathbf{p_1}})
+            \]
+            \noindent a corollary of this definition is that the same lines can be represented using different position and direction vectors. in this case, $ \mathbf{p} $ can take different points on the line $ l $, or $ \mathbf{d} $ can take any scalar multiple of the original direction vecctor.
+
+        \end{definition}
+    \subsection*{Intersections of two lines}
+        The intersection of two lines is given by the system of equations
+        \[
+            x_1 = x_2
+        \]
+        where $ x_1 $ is the vector at the intersection point and $ x_2 $ is also the vector at the intersection point
+    \subsection*{General Equation of a line}
+        The general equation of a line is given by
+        \[
+            ax_1 + by_1 = c
+        \]
+        where $ x_1 $ and $ y_1 $ are points on the     
+
+\end{document}
