@@ -1,0 +1,52 @@
+\documentclass{report}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\title{Planes}
+\author{Julian Pagcaliwagan}
+\date{December 14, 2022}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\maketitle
+\section*{Planes in $ \mathbb{R}^3 $}
+    Planes are a flat surface that exist in the vector space $ \mathbb{R}^3 $.
+    \subsection*{The equation of a plane}
+        For $ n \geq 2 \in\mathbb{R}^n $, the plane equation is as follows:
+        \begin{definition}[Plane]
+            \[
+                \left\{ \mathbf{p} + s \mathbf{v} + t \mathbf{w} \ | \ s, t \in \mathbb{R} \right\}
+            \]
+            At a certain point $ \mathbf{x} $, we have that the equation of the plane becomes
+            \[
+                \mathbf{x} = \mathbf{p} + s \mathbf{v} + t \mathbf{w}
+            \] 
+            \noindent Given three position vectors, we can deduce that the direction vectors $ \mathbf{v} $ and $ \mathbf{w} $ become the differences $ \mathbf{p_2 - p_1}, \ \mathbf{p_3 - p_1} $. Since the difference of two vectors creates a separate 'distance' vector that points from head to head.
+        \end{definition}    
+    \subsection*{Parametric equations}
+        The equation for a specific point in a plane $ x = \left[ x_1 \ x_2 \ x_3 \right] $ for a plane in $ \mathbb{R}^n, \ n \geq 3 $ is given by the equation
+        \[
+            \mathbf{x} = \mathbf{p} + s \mathbf{v} + t \mathbf{w}
+        \]
+        which satisfies
+        \[
+            \mathbf{x_1} = \mathbf{p_1} + s \mathbf{v_1} + t \mathbf{w_2}, \ \mathbf{x_2} = \mathbf{p_2} + s \mathbf{v_2} + t \mathbf{w_2}, \ \mathbf{x_3} = \mathbf{p_3} + s \mathbf{v_3} + t \mathbf{w_3}
+        \]
+    \subsection*{The general equation of a plane}
+        Similar to lines, the general equation of a plane is given by
+        \[
+            ax + by +cz = d
+        \]
+        where the non-zero normal vector $ \mathbf{n} = \left[ a \ b \ c \right] $ is orthogonal to the plane - implying that it is orthogonal to the direction vectors $ \mathbf{v} = \mathbf{p_2 - p_1} $ and $ \mathbf{w} = \mathbf{p_3 - p_1} $.
+        Also similar to lines, the general equation for the plane is equivalent to the equation
+        \[
+            \mathbf{n} \cdot \mathbf{x} = \mathbf{n} \cdot \mathbf{p}
+        \]
+        Which is called the \textbf{normal form of the equation of the plane.} since it is equivalent to $ \mathbf{n} \cdot ( \mathbf{x} - \mathbf{p}) = 0 $. In vector notation, this equation is represented as
+        \[
+            \left[ a \ b \ c \right] \cdot \left[ x \ y \ z \right] = \left[ a \ b \ c \right] \cdot \left[ p_1 \ p_2 \ p_3 \right]
+        \]
+
+\end{document}
