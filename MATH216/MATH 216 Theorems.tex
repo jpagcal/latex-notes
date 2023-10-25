@@ -17,56 +17,15 @@
 
 \begin{document}
 \maketitle
-\section*{I. Logic, Proofs, Sets, Functions}
 
 \newtheorem{t1}{Theorem}
-\begin{t1}
-    For every integer $k$, the following statements
-    are equivalent:
-    \begin{enumerate}[(i)]
-        \item $2$ divides $k$
-        \item $2$ divides $k^2$
-    \end{enumerate}
-\end{t1}
 
-\begin{t1}
-    Let $a, b$ be positive real nubmers. Then
-    \begin{equation} \tag{$\star$}
-        AM( \frac{1}{a},  \frac{1}{b}) \geq  \frac{1}{AM(a,b)}
-    \end{equation}
-    Furthermore, $(*)$ is strict unless $a=b$
-\end{t1}
-
-\begin{t1}
-    Let $k, l$  be integers with $l \neq 0$. Then $  \frac{k^2}{l^2} \neq 2$.
-\end{t1}
-
-\begin{prop}
-    Let $  A, B \neq \varnothing $ be non-empty sets
-    \begin{enumerate}[(i)]
-        \item  Either $\#A \leq \#B$ or $ \#B \leq \#A  $
-        \item $ \#A \leq \#B \iff \#B \geq \#A  $
-        \item $  \#A = \#B \iff \#A \leq \#B \And \#B \leq \#A$
-    \end{enumerate}
-\end{prop}
-
-\begin{lem}
-    $  \forall \  n \in \mathbb{N} \setminus \{1\} $, the set
-    \begin{equation}
-    \{ j \in \mathbb{N} \setminus \{ 1 \} : j \vert n \} := A_n
-    \end{equation}
-    is non-empty and its smallest element, denoted $ p(n)  $, is prime.
-\end{lem}
-
-\begin{t1}
-    For all $ n \in \mathbb{N}  $ there exists a prime $p$ with $p > n$.
-\end{t1}
 
 \section*{III. Sequences in $\mathbb{R}$}
-\newtheorem*{seqt}{Theorem}
-\newtheorem*{seql}{Lemma}
-\newtheorem*{seqc}{Corollary}
-\newtheorem*{seqp}{Proposition}
+\newtheorem{seqt}{Theorem}
+\newtheorem{seql}[seqt]{Lemma}
+\newtheorem{seqc}[seqt]{Corollary}
+\newtheorem{seqp}[seqt]{Proposition}
 
 \begin{seql} Let $(a_n)$ be a sequence.
     \begin{enumerate}[(i)]
