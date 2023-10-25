@@ -1,0 +1,92 @@
+\documentclass{report}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{enumerate}
+
+\title{CMPUT267 Assignment 2 Solutions}
+\author{Julian Pagcaliwagan}
+\date{October 7, 2023} 
+
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\maketitle
+\section*{Question 1.}
+\subsection*{1(a)}
+The values that $X_i$ and $Y_i$ can take are the values within their sample spaces. 
+Let $\Omega_X$ and $\Omega_Y$ be the sample spaces of $X_i$ and $Y_i$, respectively. Clearly,
+\begin{equation*}
+    \begin{aligned}
+        &\Omega_X = \{\text{sunny}, \text{not sunny}\}\\
+        &\Omega_Y = \{\text{free}, \text{not free}\}
+    \end{aligned}
+\end{equation*}
+By assumption, the outcome space for the two random variables
+$ X_i $ and $Y_i$ is the set $\{0, 1\}$. Let us define this outcome space as
+\begin{equation*}
+    \begin{aligned}
+        &\chi := \{0, 1\}\text{, such that}\\\\
+        &\begin{cases}
+            X_i(\text{not sunny}) = 0 \\
+            X_i(\text{sunny}) = 1 \\
+            Y_i(\text{not free}) = 0\\
+            Y_i(\text{free}) = 1.\\
+        \end{cases}
+    \end{aligned}
+\end{equation*}
+\\
+Ultimately, we are trying to find the parameters that maximize the likelihood of our dataset $\mathcal{D} = \{(x_1, y_1), (x_2, y_2), ... (x_n, y_n)\}$.
+In other words, we are solving the optimization problem
+\begin{equation*}
+    \mathit{f}_{MLE} = \text{argmax }p(\mathcal{D}|\theta)
+\end{equation*} 
+where $\mathit{f}_{MLE}$ is the maximum likelihood and $\theta$ is a vector of parameters. We assume $\forall i \in [1, n]
+\text{, } (x_i, y_i)$ is conditionally independent given $\theta$, hence
+\begin{equation*}
+    \mathit{f}_{MLE} = \text{argmax}\prod_{i = 1}^{n}p(x_i, y_i|\theta)
+\end{equation*}
+At this point, we are concerned with one single distribution $p(x_i, y_i|\theta)$ for some $i \text{ in } [1, n]$. By assumption, $Y_i$
+is dependent on $X_i$ and so the joint distribution of $X$ and $Y$ given the parameters can be $\text{expanded}$ to an equivalent form
+modelling the dependence between the two, as shown below:
+\begin{equation*}
+    \begin{aligned}
+        p(x_i, y_i|\theta)  &= \frac{p(x_i, y_i, \theta)}{p(\theta)}&\text{ Applying Bayes Theorem}\\
+                            &= \frac{p(y_i|x_i, \theta)p(x_i, \theta)}{p(\theta)}&\text{ Applying Chain Rule}\\
+                            &= \frac{p(y_i|x_i, \theta)p(x_i|\theta)p(\theta)}{p(\theta)}&\text{ Again applying Chain Rule}\\
+                            &= p(y_i|x_i, \theta)p(x_i|\theta) & (*)
+    \end{aligned}
+\end{equation*}
+One important thing to note is that if the $Y_i$ is dependent on $X_i$, then value of the prior $X_i$ changes the distribution of
+$p(y_i | x_i, \theta)$. This means that 
+\begin{equation*}
+    p(y_i|X_i = 1, \theta) \neq p(y_i|X_i = 0, \theta)
+\end{equation*}
+or equivalently, that there are different Bernoulli parameters $\alpha_0$ and $\alpha_1$ for the distributions $p(y_i|X_i = 0, \theta)$ and
+$p(y_i|X_i = 1, \theta)$ respectively. We can now define our vector of parameters $\theta$ as
+\begin{equation*}
+    \theta:=(\alpha_0, \alpha_1, \alpha_x)
+\end{equation*}
+where $\alpha_x$ is the parameter for $p(x_i)$, so our equation $(*)$ is now 
+\begin{equation*}
+        p(x_i, y_i|\theta) = p(y_i|X_i = 0, \theta)^{1-x_i}p(y_i|X_i = 1, \theta)^{x_i}p(x_i|\theta)
+\end{equation*}
+(\textbf{I used the hint on the announcements to expand the conditional distribution}). Now we can begin to construct the likelihood function $\mathit{f}_{MLE}$ with this information.
+Our distributions with respect to the parameters in $\theta$ can be $\text{expanded}$ to their Bernoulli functions:
+\begin{equation*}
+    \begin{aligned}
+        &p(y_i|X_i = 0, \theta) &= \alpha_{0}^{y_i}(1-\alpha_0)^{1-y_i}\\
+        &p(y_i|X_i = 1, \theta) &= \alpha_{1}^{y_i}(1-\alpha_1)^{1-y_i}\\
+        &p(X_i|\theta) &= \alpha_{x}^{x_i}(1-\alpha_{x})^{1-x_i}
+    \end{aligned}
+\end{equation*}
+Therefore, our likelihood function $\mathit{f}_{MLE}$ can be $\text{expanded}$ to
+\begin{equation*}
+    \mathit{f}_{MLE} = \text{argmax}\prod_{i = 1}^{n}(\alpha_{0}^{y_i}(1-\alpha_0)^{1-y_i})^{1-x_i}(\alpha_{1}^{y_i}(1-\alpha_1)^{1-y_i})^{x_i}\alpha_{x}^{x_i}(1-\alpha_{x})^{1-x_i}
+\end{equation*}
+\subsection*{1(b)}
+\section*{Question 2.}
+\subsection*{2(a)}
+\end{document}

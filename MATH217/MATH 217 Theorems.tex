@@ -1,0 +1,57 @@
+\documentclass{report}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{enumerate}
+
+\title{MATH 217 Theorems}
+\author{Julian Pagcaliwagan}
+\date{September 7, 2023}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\newtheorem{t1}{Theorem}
+\newtheorem{lem}{Lemma}
+\newtheorem{coro}{Corollary}
+\newtheorem{prop}{Proposition}
+
+\begin{document}
+\maketitle
+
+\begin{lem}
+    Let $\mathbb{O}_1$ be an ordered field. Then for every $ x \in \mathbb{O}_1 
+     $ we have that $ x^2 = x \cdot x > 0  $.
+\end{lem}
+
+\begin{coro}
+    The field $\mathbb{C}$ of complex numbers is NOT orderable. (hint for proof: )
+\end{coro}
+
+\begin{lem}
+    Let $  \mathbb{O}_1 $ be an ordered field, and consider the following subset of it:
+    \begin{equation*}
+        \mathcal{P}_{\mathbb{O}_1} = \{ x \in \mathbb{O}_1: 0 < x\}
+    \end{equation*}
+    then, $\forall y, z \in \mathcal{P}_{\mathbb{O}_1}  $ we have that
+    $ y + z \in \mathcal{P}_{\mathbb{O}_1}  $ and $ y \cdot z \in \mathcal{P}_{\mathbb{O}_1}  $
+\end{lem}
+
+\begin{t1}
+    Let $ \mathbb{F} = (\mathbb{F}_1, +_\mathbb{F}, \cdot_\mathbb{F})  $ be a field,
+    and suppose that there is a subset $ \mathcal{P}_1 $ of $\mathbb{F}$ for which properties
+    (O1'), (O2'), and (O3') hold true. Then $\mathbb{F}$ is orderable. More specifically, the order relation
+    '$\leq$' that is given by the strict order relation '$<$' which is defined by:
+    \begin{equation*}
+        x < y \textnormal{ if } y - x \in \mathcal{P}_1
+    \end{equation*}
+    is a total order on $\mathbb{F}$ which is compatible with the addition and multiplication
+    on $\mathbb{F}$.
+\end{t1}
+
+\begin{prop}
+    let $\mathbb{O}_1$ be an ordered field. Then, for any prime $p \in \mathbb{N}$ we have that
+    no subfield of $\mathbb{O}_1$ is isomorphic to $\mathbb{Z}_p$. More generally, 
+    we have that NO subfield of $\mathbb{O}_1$ is finite. 
+\end{prop}
+
+\end{document}
