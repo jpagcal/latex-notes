@@ -1,0 +1,149 @@
+\documentclass{report}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{mdframed}
+
+\title{Math 216 Theorems}
+\author{Julian Pagcaliwagan}
+\date{September 7, 2023}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\newtheorem{lem}{Lemma}
+\newtheorem{coro}{Corollary}
+\newtheorem{prop}{Proposition}
+
+\begin{document}
+\maketitle
+\section*{I. Logic, Proofs, Sets, Functions}
+
+\newtheorem{t1}{Theorem}
+\begin{t1}
+    For every integer $k$, the following statements
+    are equivalent:
+    \begin{enumerate}[(i)]
+        \item $2$ divides $k$
+        \item $2$ divides $k^2$
+    \end{enumerate}
+\end{t1}
+
+\begin{t1}
+    Let $a, b$ be positive real nubmers. Then
+    \begin{equation} \tag{$\star$}
+        AM( \frac{1}{a},  \frac{1}{b}) \geq  \frac{1}{AM(a,b)}
+    \end{equation}
+    Furthermore, $(*)$ is strict unless $a=b$
+\end{t1}
+
+\begin{t1}
+    Let $k, l$  be integers with $l \neq 0$. Then $  \frac{k^2}{l^2} \neq 2$.
+\end{t1}
+
+\begin{prop}
+    Let $  A, B \neq \varnothing $ be non-empty sets
+    \begin{enumerate}[(i)]
+        \item  Either $\#A \leq \#B$ or $ \#B \leq \#A  $
+        \item $ \#A \leq \#B \iff \#B \geq \#A  $
+        \item $  \#A = \#B \iff \#A \leq \#B \And \#B \leq \#A$
+    \end{enumerate}
+\end{prop}
+
+\begin{lem}
+    $  \forall \  n \in \mathbb{N} \setminus \{1\} $, the set
+    \begin{equation}
+    \{ j \in \mathbb{N} \setminus \{ 1 \} : j \vert n \} := A_n
+    \end{equation}
+    is non-empty and its smallest element, denoted $ p(n)  $, is prime.
+\end{lem}
+
+\begin{t1}
+    For all $ n \in \mathbb{N}  $ there exists a prime $p$ with $p > n$.
+\end{t1}
+
+\section*{III. Sequences in $\mathbb{R}$}
+\newtheorem*{seqt}{Theorem}
+\newtheorem*{seql}{Lemma}
+\newtheorem*{seqc}{Corollary}
+\newtheorem*{seqp}{Proposition}
+
+\begin{seql} Let $(a_n)$ be a sequence.
+    \begin{enumerate}[(i)]
+        \item $(a_n)$ can have at most one limit.
+        \item If $(a_n)$ is convergent, then $(a_n)$ is bounded.
+    \end{enumerate}
+\end{seql}
+
+\begin{seqt}
+    Let $(a_n), (b_n)$ be sequences in $\mathbb{R}$ such that $(a_n) \rightarrow a \text{ and } (b_n) \rightarrow b$. Then
+        \[ \lim_{n\to\infty} (a_n \pm b_n) = \lim_{n\to\infty} (a_n) \pm \lim_{n\to\infty} (b_n)\] 
+        \[ \lim_{n\to\infty} (a_n) \cdot (b_n) = \lim_{n\to\infty} (a_n) \cdot \lim_{n\to\infty} (b_n)\]
+        \[ \lim_{n\to\infty} \frac{(a_n)}{b_n} = \frac{\lim_{n\to\infty} (a_n)}{\lim_{n\to\infty} (b_n)}\]
+        \[ \lim_{n\to\infty} |(a_n)| = |\lim_{n\to\infty} (a_n)|\]
+\end{seqt}
+
+\begin{seqt}
+    Let $(a_n), (b_n)$ be sequences in $\mathbb{R}$ such that $(a_n) \rightarrow a \text{ and } (b_n) \rightarrow b$. Assume now that
+    $\forall n\in\mathbb{N}, a_n\leq b_n.$ Then
+    \[ \lim_{n\to\infty} (a_n) \leq \lim_{n\to\infty} (b_n)\]
+\end{seqt}
+
+\begin{seqt}
+    Let $(a_n), (b_n), (c_n)\text{ be sequences in }\mathbb{R}.$ If $(a_n)\to a, (c_n)\to a, \text{ and } \forall n\in\mathbb{N}, a_n \leq b_n \leq c_n$,
+    then $(b_n)\to a$. 
+\end{seqt}
+
+\begin{seqt}
+    For every monotone sequence $(a_n) \text{ in } \mathbb{R}$, the following are equivalent:
+    \begin{enumerate}[(i)]
+        \item $(a_n)$ is convergent
+        \item $(a_n)$ is bounded
+    \end{enumerate}
+\end{seqt}
+
+\begin{seqt}
+    Let $I_1 \supset I_2 \supset I_3 \supset \dots$ be non-empty closed intervals. Then the set
+    \[\bigcap_{n\in\mathbb{N}} I_n := \{c\in\mathbb{R}:c\in I_n\} \]
+    is non-empty.
+\end{seqt}
+
+\begin{seql}
+    Assume that $A_j$ is a countable set $\forall j\in\mathbb{N}$. Then
+    \[\bigcup_{j\in\mathbb{N}} A_j := \left\{ a: a\in A_j \text{ for some } j\in\mathbb{N} \right\}\]
+    is also countable.
+\end{seql}
+
+\begin{seqt}
+    $\mathbb{Q}$ is countable.
+\end{seqt}
+
+\begin{seqt}
+    $\mathbb{R}$ is uncountable.
+\end{seqt}
+
+\begin{seql}
+    Let $(a_n)$ be a sequence in $\mathbb{R}$. If $(a_n)$ converges to $a\in\mathbb{R}$ then any subsequence $(a_{n_j})$ of $(a_n)$
+    also converges to $a$. i.e. $\mathbb{S}[a_n] = \{a\}$
+\end{seql}
+
+\begin{seql}
+    Every sequence $(a_n)$ in $\mathbb{R}$ has a monotone subsequence.
+\end{seql}
+
+\begin{seqt}
+    Every bounded sequence in $\mathbb{R}$ has a convergent subsequence.
+\end{seqt}
+
+\begin{seql}
+    Let $(a_n)$ be a sequence in $\mathbb{R}$. Then
+    \begin{enumerate}[(i)]
+        \item  $\mathbb{S}[a_n]\neq\varnothing$
+        \item $\mathbb{S}[a_n] \subset \mathbb{R}\iff (a_n)$ is bounded.
+        \item $\mathbb{S}[a_n] = \{a\}\iff\lim_{n\to\infty}(a_n)=a$
+    \end{enumerate}
+\end{seql}
+
+
+
+\end{document}
