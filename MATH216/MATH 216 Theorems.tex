@@ -103,6 +103,67 @@
     \end{enumerate}
 \end{seql}
 
+\begin{seql}
+    Let $(a_n)$ be a sequence in $\mathbb{R}$.
+    \begin{enumerate}[(i)]
+        \item  If $(a_n)$ is convergent then $(a_n)$ is Cauchy
+        \item  If $(a_n)$ is Cauchy then $(a_n)$ is bounded
+    \end{enumerate}
+\end{seql}
 
+\begin{seqt}
+    For every sequence $(a_n)$ in $\mathbb{R}$ the following are equivalent:
+    \begin{enumerate}[(i)]
+        \item $(a_n)$ is convergent
+        \item $(a_n)$ is Cauchy
+    \end{enumerate}
+\end{seqt}
 
+\begin{seql}
+    If $\sum_{n = 1}^{\infty}a_n$ is convergent then $\lim_{n\to\infty}(a_n) = 0$.
+\end{seql}
+
+\begin{seqt}[Alternating Series Test]
+    Assume that $(b_n)$ is monotone. Then the following are equivalent:
+    \begin{enumerate}[(i)]
+        \item $\sum_{n = 1}^{\infty}(-1)^nb_n$ is convergent
+        \item $(b_n) \to 0$
+    \end{enumerate}
+\end{seqt}
+
+\begin{seql}
+    If $\sum_{n=1}^{\infty}a_n$ is absolutely convergent then it is convergent.
+\end{seql}
+
+\begin{seql}
+    Let $(a_n), (b_n)$ be sequences in $\mathbb{R}$ with $|a_n| \leq b_n$ for all $n\in\mathbb{N}$.
+    If $\sum_{n = 1}^{\infty}b_n$ converges then $\sum_{n = 0}^{\infty}a_n$ converges absolutely.
+\end{seql}
+
+\begin{seqt}
+    Let $(a_n)$ be a sequence in $\mathbb{R}$ and $r = \limsup_{n\to\infty}\sqrt[n]{|a_n|}$. (so $r\in\{0\}\cup\mathbb{R}^+\cup\{\infty\}$)
+    \begin{enumerate}[(i)]
+        \item if $0 \leq r < 1$ then $\sum_{n = 1}^{\infty}$ is absolutely convergent
+        \item if $r > 1$ then $\sum_{n=1}^{\infty}$ is divergent.
+    \end{enumerate}
+\end{seqt}
+
+\begin{seqc}
+    Let $(a_n)$ be a sequence in $\mathbb{R}\setminus\{0\}$ and assume that $r:=\lim_{n\to\infty}|\frac{a_{n+1}}{a_n}|$ exists
+    \begin{enumerate}[(i)]
+        \item If $0\leq r < 1$ then $\sum_{n=1}^{\infty}a_n$ is absolutely convergent.
+        \item If $r > 1$ then $\sum_{n=1}^{\infty}a_n$ is divergent.
+    \end{enumerate}
+\end{seqc}
+
+\begin{seqt}
+    Let $(a_n), (b_n)$ be sequences in $\mathbb{R}$. If $\sum_{n=1}^{\infty}a_n$ and $\sum_{n=1}^{\infty}b_n$ are absolutely convergent, then their Cauchy product
+    $\sum_{n=1}^{\infty}c_n$ is also absolutely convergent and $\sum_{n=1}^{\infty}a_n\sum_{n=1}^{\infty}b_n=\sum_{n=1}^{\infty}c_n$.
+\end{seqt}
+\begin{seqt}
+    If $\sum_{n=1}^{\infty}a_n$ is absolutely convergent then for every bijection $f:\mathbb{N}\to\mathbb{N}$ the series $\sum_{n=1}^{\infty}a_{f(n)}$ is also absolutely convergent, and
+    \begin{equation}
+        \sum_{n=1}^{\infty}a_{f(n)} = \sum_{n=1}^{\infty}a_n
+    \end{equation}
+\end{seqt}
 \end{document}
